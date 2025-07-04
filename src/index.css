@@ -1,0 +1,104 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 15% 12%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 15% 16%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 15% 16%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 235 80% 68%;
+    --primary-foreground: 220 15% 12%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 220 15% 95%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 235 80% 68%;
+    --accent-foreground: 220 15% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 235 80% 68%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 15% 12%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 235 80% 68%;
+    --sidebar-primary-foreground: 220 15% 12%;
+    --sidebar-accent: 220 15% 20%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 235 80% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-tech-dark text-foreground font-space;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(107, 127, 232, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(95, 202, 202, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(167, 139, 250, 0.06) 0%, transparent 50%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .tech-gradient {
+    background: linear-gradient(135deg, #6B7FE8 0%, #5FCACA 100%);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #6B7FE8 0%, #5FCACA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(107, 127, 232, 0.2);
+  }
+  
+  .typewriter {
+    overflow: hidden;
+    border-right: 0.15em solid #6B7FE8;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #6B7FE8 }
+  }
+}
